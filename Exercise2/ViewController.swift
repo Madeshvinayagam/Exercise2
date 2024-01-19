@@ -9,6 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelValue: UILabel!
+    var labelDisplay = 0
+    
+    
+    @IBAction func addValue(_ sender: Any) {
+        labelDisplay += 1
+        labelValue.text=String(labelDisplay)
+    }
+    
+    @IBAction func decValue(_ sender: Any) {
+        labelDisplay -= 1
+        labelValue.text=String(labelDisplay)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
