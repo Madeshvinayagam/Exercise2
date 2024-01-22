@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         labelDisplay -= 1
         labelValue.text=String(labelDisplay)
     }
+    
+    @IBAction func resetValue(_ sender: Any) {
+        labelDisplay = 0
+        labelValue.text=String(labelDisplay)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
