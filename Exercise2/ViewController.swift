@@ -11,27 +11,27 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelValue: UILabel!
     var labelDisplay = 0
-    let step = 2
+    var step = 1
     
     
     @IBAction func addValue(_ sender: Any) {
-        labelDisplay += 1
+        labelDisplay += step
         labelValue.text=String(labelDisplay)
     }
     
     @IBAction func decValue(_ sender: Any) {
-        labelDisplay -= 1
+        labelDisplay -= step
         labelValue.text=String(labelDisplay)
     }
     
     @IBAction func resetValue(_ sender: Any) {
         labelDisplay = 0
+        step = 1
         labelValue.text=String(labelDisplay)
     }
     
     @IBAction func stepValue(_ sender: Any) {
-        labelDisplay += step
-        labelValue.text = String(labelDisplay)
+        step = 2
     }
     
     override func viewDidLoad() {
